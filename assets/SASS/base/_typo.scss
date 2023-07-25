@@ -3,8 +3,6 @@
     color: black;
 }
 
-;
-
 
 .font-family-titles {
     font-family: $font-family-titles;
@@ -12,15 +10,11 @@
     font-weight: 400;
 }
 
-;
-
 .header__location__text {
     font-size: 16px;
     color: map-get($Color-palette, gray-tones, text);
     font-weight: 500;
 }
-
-;
 
 .titles-section {
     font-size: 24px;
@@ -39,7 +33,6 @@
     font-weight: 500;
 }
 
-;
 
 .instructions__list__component__numbers {
     font-size: 14.182px;
@@ -47,9 +40,20 @@
     color: map-get($Color-palette, gray-tones, background)
 }
 
-;
 
 .instructions__list__component__text {
     font-size: 16px;
     font-weight: 500;
+}
+
+.restaurant__card {
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        font-size: 17px;
+        font-weight: 300;
+    }
 }
