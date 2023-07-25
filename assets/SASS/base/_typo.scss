@@ -1,0 +1,57 @@
+//General typography
+/*$font-size: (
+    mobile: (btn-text:16px,
+        location:16px,
+        titles-homepage:24px,
+        presentation-homepage:18px,
+        instruction-text-homepage:16px,
+        restaurant-name-homepage:18px,
+        location-resto-homepage:17px,
+        h1-pages:28px,
+        categories-pages:16px,
+        menu-name:18px,
+        menu-text:15px,
+        logo-footer:18px,
+        text-footer:16px,
+    ),*/
+
+* {
+    font-family: $font-family-text;
+    color: black;
+}
+
+;
+
+
+.font-family-titles {
+    font-family: $font-family-titles;
+}
+
+;
+
+.header__location__text {
+    font-size: 16px;
+    color: map-get($Color-palette, gray-tones, text);
+    font-weight: 500;
+}
+
+;
+
+.titles-section {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.homepage-presentation__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: map-get($Color-palette, gray-tones, text);
+}
+
+.btn-action {
+    color: map-get($Color-palette, btn-text);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+;

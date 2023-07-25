@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   text-decoration: none;
   padding: 0;
@@ -24,7 +25,68 @@
   z-index: 2;
 }
 
-/*Header - homepage*/
+/*$font-size: (
+    mobile: (btn-text:16px,
+        location:16px,
+        titles-homepage:24px,
+        presentation-homepage:18px,
+        instruction-text-homepage:16px,
+        restaurant-name-homepage:18px,
+        location-resto-homepage:17px,
+        h1-pages:28px,
+        categories-pages:16px,
+        menu-name:18px,
+        menu-text:15px,
+        logo-footer:18px,
+        text-footer:16px,
+    ),*/
+* {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.font-family-titles {
+  font-family: "Shrikhand", cursive;
+}
+
+.header__location__text {
+  font-size: 16px;
+  color: #353535;
+  font-weight: 500;
+}
+
+.titles-section {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.homepage-presentation__subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #353535;
+}
+
+.btn-action {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn-action {
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  padding: 13px 19px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.btn-action--command {
+  padding: 15px 48px;
+}
+
+/*Header-homepage*/
 .header__location {
   display: flex;
   justify-content: center;
@@ -35,4 +97,22 @@
   background-color: #EAEAEA;
   position: sticky;
   z-index: 1;
+}
+
+/*Presentation-homepage*/
+.homepage-presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #F6F6F6;
+  padding: 39px 0 57px;
+}
+.homepage-presentation__h1 {
+  padding: 0 50px;
+  text-align: center;
+}
+.homepage-presentation__subtitle {
+  padding: 0 30px 30px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

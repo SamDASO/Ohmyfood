@@ -1,0 +1,35 @@
+/*Header-homepage*/
+
+.header__location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 17px;
+    background-color: map-get($Color-palette, gray-tones, bg-location);
+    position: sticky;
+    z-index: 1;
+}
+
+;
+
+/*Presentation-homepage*/
+.homepage-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: map-get($Color-palette, gray-tones, background);
+    padding: 39px 0 57px;
+
+    &__h1 {
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        padding: 0 30px 30px;
+        text-align: center;
+    }
+}
