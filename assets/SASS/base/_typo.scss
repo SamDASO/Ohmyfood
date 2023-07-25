@@ -57,3 +57,16 @@
         font-weight: 300;
     }
 }
+
+.footer {
+    &__logo {
+        font-family: $font-family-titles;
+        font-size: 18px;
+        font-weight: 400;
+
+        &__list__component__text {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
