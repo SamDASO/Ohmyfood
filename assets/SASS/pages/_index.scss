@@ -33,3 +33,62 @@
         text-align: center;
     }
 }
+
+;
+
+/*Instruction section -homepage*/
+.instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px 20px 68px;
+
+    &__title {
+        margin-bottom: 26px;
+    }
+
+    &__list {
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        padding-left: 10px;
+
+        &__component {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            padding: 29px 38px 33px 0;
+            border-radius: 20px;
+            background-color: map-get($Color-palette, gray-tones, background);
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+            &__numbers {
+                position: absolute;
+                left: 20px;
+                display: flex;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                background-color: map-get($Color-palette, primary-color);
+                justify-content: center;
+                align-items: center;
+            }
+
+            &__icon {
+                margin-left: 33px;
+            }
+
+            &__text {
+                margin-left: 24px;
+            }
+
+        }
+    }
+}

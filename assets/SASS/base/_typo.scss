@@ -1,20 +1,3 @@
-//General typography
-/*$font-size: (
-    mobile: (btn-text:16px,
-        location:16px,
-        titles-homepage:24px,
-        presentation-homepage:18px,
-        instruction-text-homepage:16px,
-        restaurant-name-homepage:18px,
-        location-resto-homepage:17px,
-        h1-pages:28px,
-        categories-pages:16px,
-        menu-name:18px,
-        menu-text:15px,
-        logo-footer:18px,
-        text-footer:16px,
-    ),*/
-
 * {
     font-family: $font-family-text;
     color: black;
@@ -25,6 +8,8 @@
 
 .font-family-titles {
     font-family: $font-family-titles;
+    font-size: 28px;
+    font-weight: 400;
 }
 
 ;
@@ -55,3 +40,16 @@
 }
 
 ;
+
+.instructions__list__component__numbers {
+    font-size: 14.182px;
+    font-weight: 500;
+    color: map-get($Color-palette, gray-tones, background)
+}
+
+;
+
+.instructions__list__component__text {
+    font-size: 16px;
+    font-weight: 500;
+}
