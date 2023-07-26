@@ -1,0 +1,21 @@
+//Colors
+$Color-palette: (
+    primary-color: #9356DC,
+    secondary-color: #FF79DA,
+    primary-color-less-opacity:#9256dc76,
+    tertiary-color: #99E2D0,
+    text-tertiary-color: #008766,
+    btn-text: white,
+    btn-background:linear-gradient(175deg, #9356DC 0%, #FF79DA 100%),
+    grey-tones: (text:#353535, bg-location:#EAEAEA, background:#F6F6F6, ),
+);
+
+//Font-family
+$font-family-titles: 'Shrikhand', cursive;
+$font-family-text: 'Roboto', sans-serif;
+
+//Variables animations loader
+$animation-duration: 1500ms;
+$iteration-loader: 4;
+$animation-delay: $animation-duration/4;
+$animation-duration-bg: $animation-duration*4 + 1s;

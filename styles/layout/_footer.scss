@@ -7,7 +7,7 @@
     align-items: flex-start;
     gap: 16px;
     padding: 22px 25px;
-    background-color: map-get($Color-palette, gray-tones, text);
+    background-color: map-get($Color-palette, grey-tones, text);
 
     &__logo {
         color: white;

@@ -6,13 +6,11 @@
   list-style-type: none;
 }
 
-html {
-  width: 100vw;
-}
-
 body {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 * {
@@ -26,59 +24,24 @@ body {
   font-weight: 400;
 }
 
-.header__location__text {
-  font-size: 16px;
-  color: #353535;
-  font-weight: 500;
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
 }
-
-.titles-section {
-  font-size: 24px;
-  font-weight: 700;
+@keyframes visible-loader {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
 }
-
-.homepage-presentation__subtitle {
-  font-size: 18px;
-  font-weight: 300;
-  color: #353535;
-}
-
-.btn-action {
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.instructions__list__component__numbers {
-  font-size: 14.182px;
-  font-weight: 500;
-  color: #F6F6F6;
-}
-
-.instructions__list__component__text {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.restaurant__card__title {
-  font-size: 18px;
-  font-weight: 700;
-}
-.restaurant__card__subtitle {
-  font-size: 17px;
-  font-weight: 300;
-}
-
-.footer__logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 18px;
-  font-weight: 400;
-}
-.footer__logo__list__component__text {
-  font-size: 16px;
-  font-weight: 400;
-}
-
 .btn-action {
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   padding: 13px 19px;
@@ -88,8 +51,11 @@ body {
   border: none;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
 }
-.btn-action--command {
+.btn-action--order {
   padding: 15px 48px;
 }
 
@@ -99,6 +65,50 @@ body {
           appearance: none;
   background-color: transparent;
   border: none;
+}
+
+.container-loader {
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 110vh;
+  position: fixed;
+  z-index: 100;
+  background-color: #F6F6F6;
+  animation: visible-loader 7000ms;
+  animation-delay: 375ms;
+}
+.container-loader__loader {
+  width: 50vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container-loader__loader__bar {
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  opacity: 0;
+  height: 100%;
+  width: 5vw;
+  animation: bars 1500ms;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 4;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+.container-loader__loader__bar--1 {
+  animation-delay: 375ms;
+}
+.container-loader__loader__bar--2 {
+  animation-delay: 750ms;
+}
+.container-loader__loader__bar--3 {
+  animation-delay: 1125ms;
+}
+.container-loader__loader__bar--4 {
+  animation-delay: 1500ms;
 }
 
 /***************header all pages*************/
@@ -132,6 +142,9 @@ body {
 }
 .footer__logo {
   color: white;
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
 }
 .footer__list {
   display: flex;
@@ -146,6 +159,8 @@ body {
 }
 .footer__list__component__text {
   color: white;
+  font-size: 16px;
+  font-weight: 400;
 }
 .footer__list__component__text--bold {
   font-weight: 500;
@@ -163,6 +178,11 @@ body {
   position: relative;
   z-index: 1;
 }
+.header__location__text {
+  font-size: 16px;
+  color: #353535;
+  font-weight: 500;
+}
 
 /*Presentation-homepage*/
 .homepage-presentation {
@@ -176,10 +196,15 @@ body {
 .homepage-presentation__h1 {
   padding: 0 50px;
   text-align: center;
+  font-size: 24px;
+  font-weight: 700;
 }
 .homepage-presentation__subtitle {
   padding: 0 30px 30px;
   text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: #353535;
 }
 
 /*Instruction section -homepage*/
@@ -193,6 +218,8 @@ body {
 }
 .instructions__title {
   margin-bottom: 26px;
+  font-size: 24px;
+  font-weight: 700;
 }
 .instructions__list {
   display: flex;
@@ -225,12 +252,17 @@ body {
   background-color: #9356DC;
   justify-content: center;
   align-items: center;
+  font-size: 14.182px;
+  font-weight: 500;
+  color: #F6F6F6;
 }
 .instructions__list__component__icon {
   margin-left: 33px;
 }
 .instructions__list__component__text {
   margin-left: 24px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /*Restaurant -homepage*/
@@ -245,6 +277,8 @@ body {
 .restaurant__title {
   align-self: flex-start;
   margin-bottom: 23px;
+  font-size: 24px;
+  font-weight: 700;
 }
 .restaurant__card {
   position: relative;
@@ -279,9 +313,13 @@ body {
 }
 .restaurant__card__title {
   margin: 13px 0 5px 13px;
+  font-size: 18px;
+  font-weight: 700;
 }
 .restaurant__card__subtitle {
   margin: 0 0 12px 13px;
+  font-size: 17px;
+  font-weight: 300;
 }
 .restaurant__card__heart-btn {
   position: absolute;

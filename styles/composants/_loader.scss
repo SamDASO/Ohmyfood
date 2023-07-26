@@ -1,0 +1,39 @@
+.container-loader {
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 110vh;
+    position: fixed;
+    z-index: 100;
+    background-color: map-get($Color-palette, grey-tones, background);
+    animation: visible-loader $animation-duration-bg;
+    animation-delay: $animation-delay;
+
+    &__loader {
+        width: 50vw;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        &__bar {
+            background: map-get($Color-palette, btn-background);
+            opacity: 0;
+            height: 100%;
+            width: 5vw;
+            animation: bars $animation-duration;
+            animation-fill-mode: backwards;
+            animation-iteration-count: $iteration-loader;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+
+            @for $i from 1 through 4 {
+                &--#{$i} {
+                    animation-delay: $animation-delay*$i;
+                }
+            }
+        }
+    }
+}

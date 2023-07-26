@@ -7,13 +7,13 @@
     width: 100%;
     height: 50px;
     gap: 17px;
-    background-color: map-get($Color-palette, gray-tones, bg-location);
+    background-color: map-get($Color-palette, grey-tones, bg-location);
     position: relative;
     z-index: 1;
 
     &__text {
         font-size: 16px;
-        color: map-get($Color-palette, gray-tones, text);
+        color: map-get($Color-palette, grey-tones, text);
         font-weight: 500;
     }
 }
@@ -25,7 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: map-get($Color-palette, gray-tones, background);
+    background: map-get($Color-palette, grey-tones, background);
     padding: 39px 0 57px;
 
     &__h1 {
@@ -40,7 +40,7 @@
         text-align: center;
         font-size: 18px;
         font-weight: 300;
-        color: map-get($Color-palette, gray-tones, text);
+        color: map-get($Color-palette, grey-tones, text);
     }
 }
 
@@ -78,7 +78,7 @@
             width: 100%;
             padding: 29px 38px 33px 0;
             border-radius: 20px;
-            background-color: map-get($Color-palette, gray-tones, background);
+            background-color: map-get($Color-palette, grey-tones, background);
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
             &__numbers {
@@ -93,7 +93,7 @@
                 align-items: center;
                 font-size: 14.182px;
                 font-weight: 500;
-                color: map-get($Color-palette, gray-tones, background)
+                color: map-get($Color-palette, grey-tones, background)
             }
 
             &__icon {
@@ -117,7 +117,7 @@
     justify-content: center;
     align-items: center;
     padding: 54px 20px 66px;
-    background-color: map-get($Color-palette, gray-tones, background);
+    background-color: map-get($Color-palette, grey-tones, background);
 
     &__title {
         align-self: flex-start;
