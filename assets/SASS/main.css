@@ -13,7 +13,6 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  max-width: 1440px;
 }
 
 * {
@@ -240,7 +239,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1024px;
   padding: 54px 20px 66px;
   background-color: #F6F6F6;
 }
@@ -255,6 +253,7 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-bottom: 18px;
 }
 .restaurant__card__img {
   position: relative;

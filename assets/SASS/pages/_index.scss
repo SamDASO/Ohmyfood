@@ -98,7 +98,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1024px;
     padding: 54px 20px 66px;
     background-color: map-get($Color-palette, gray-tones, background);
 
@@ -114,6 +113,7 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
+        margin-bottom: 18px;
 
         &__img {
             position: relative;
