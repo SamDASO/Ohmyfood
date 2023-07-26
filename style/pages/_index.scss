@@ -10,6 +10,12 @@
     background-color: map-get($Color-palette, gray-tones, bg-location);
     position: relative;
     z-index: 1;
+
+    &__text {
+        font-size: 16px;
+        color: map-get($Color-palette, gray-tones, text);
+        font-weight: 500;
+    }
 }
 
 
@@ -25,11 +31,16 @@
     &__h1 {
         padding: 0 50px;
         text-align: center;
+        font-size: 24px;
+        font-weight: 700;
     }
 
     &__subtitle {
         padding: 0 30px 30px;
         text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        color: map-get($Color-palette, gray-tones, text);
     }
 }
 
@@ -45,6 +56,8 @@
 
     &__title {
         margin-bottom: 26px;
+        font-size: 24px;
+        font-weight: 700;
     }
 
     &__list {
@@ -78,6 +91,9 @@
                 background-color: map-get($Color-palette, primary-color);
                 justify-content: center;
                 align-items: center;
+                font-size: 14.182px;
+                font-weight: 500;
+                color: map-get($Color-palette, gray-tones, background)
             }
 
             &__icon {
@@ -86,6 +102,8 @@
 
             &__text {
                 margin-left: 24px;
+                font-size: 16px;
+                font-weight: 500;
             }
 
         }
@@ -104,6 +122,8 @@
     &__title {
         align-self: flex-start;
         margin-bottom: 23px;
+        font-size: 24px;
+        font-weight: 700;
     }
 
     &__card {
@@ -142,10 +162,14 @@
 
         &__title {
             margin: 13px 0 5px 13px;
+            font-size: 18px;
+            font-weight: 700;
         }
 
         &__subtitle {
             margin: 0 0 12px 13px;
+            font-size: 17px;
+            font-weight: 300;
         }
 
         &__heart-btn {

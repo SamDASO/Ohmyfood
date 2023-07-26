@@ -6,8 +6,11 @@
     border: none;
     border-radius: 25px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: map-get($Color-palette, btn-text);
+    font-size: 16px;
+    font-weight: 500;
 
-    &--command {
+    &--order {
         padding: 15px 48px;
     }
 }
