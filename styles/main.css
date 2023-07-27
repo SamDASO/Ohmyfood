@@ -43,6 +43,14 @@ body {
   }
 }
 .btn-action {
+  transition: all 1000ms ease;
+}
+.btn-action:hover {
+  filter: brightness(1.2);
+  -webkit-filter: brightness(1.2);
+}
+
+.btn-action {
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   padding: 13px 19px;
   -webkit-appearance: none;
