@@ -16,9 +16,14 @@
 }
 
 
-//Btn coeur
-.restaurant__card__heart-btn {
+//Btn coeur reset
+.heart-btn {
     appearance: none;
     background-color: transparent;
     border: none;
+
+    &__icon:hover path {
+        animation: animation-like 0.5s;
+        animation-fill-mode: forwards;
+    }
 }

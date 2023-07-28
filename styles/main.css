@@ -50,6 +50,15 @@ body {
   -webkit-filter: brightness(1.2);
 }
 
+@keyframes animation-like {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: url(#btn-gradient) #9356DC;
+    stroke: none;
+  }
+}
 .btn-action {
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   padding: 13px 19px;
@@ -67,12 +76,16 @@ body {
   padding: 15px 48px;
 }
 
-.restaurant__card__heart-btn {
+.heart-btn {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background-color: transparent;
   border: none;
+}
+.heart-btn__icon:hover path {
+  animation: animation-like 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .container-loader {

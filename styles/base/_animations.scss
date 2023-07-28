@@ -33,3 +33,18 @@
         -webkit-filter: brightness(1.2)
     }
 }
+
+
+//Animation coeur
+
+@keyframes animation-like {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: url(#btn-gradient) #9356DC;
+        stroke: none;
+    }
+
+}
