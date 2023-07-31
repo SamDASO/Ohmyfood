@@ -9,6 +9,14 @@
     padding: 22px 25px;
     background-color: map-get($Color-palette, grey-tones, text);
 
+    @include media-desktop {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        padding: 25px;
+    }
+
     &__logo {
         color: white;
         font-family: $font-family-titles;
@@ -23,9 +31,19 @@
         align-items: flex-start;
         gap: 7px;
 
+        @include media-desktop {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
         &__component {
             display: flex;
             gap: 11px;
+
+            @include media-desktop {
+                padding: 0 10px;
+            }
 
             &__text {
                 color: white;

@@ -16,5 +16,10 @@
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
         position: relative;
         z-index: 2;
+
+        @include media-desktop {
+            box-shadow: none;
+        }
+
     }
 }

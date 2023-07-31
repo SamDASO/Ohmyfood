@@ -23,7 +23,8 @@
             opacity: 0;
             height: 100%;
             width: 5vw;
-            animation: bars $animation-duration;
+            animation: bars;
+            animation-duration: $animation-duration;
             animation-fill-mode: backwards;
             animation-iteration-count: $iteration-loader;
             animation-direction: alternate-reverse;

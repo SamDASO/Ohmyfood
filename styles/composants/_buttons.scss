@@ -23,7 +23,7 @@
     border: none;
 
     &__icon:hover path {
-        animation: animation-like 0.5s;
+        animation: animation-like;
         animation-fill-mode: forwards;
     }
 }

@@ -28,11 +28,20 @@
     background: map-get($Color-palette, grey-tones, background);
     padding: 39px 0 57px;
 
+    @include media-desktop {
+        gap: 18px;
+        padding: 30px 0;
+    }
+
     &__h1 {
         padding: 0 50px;
         text-align: center;
         font-size: 24px;
         font-weight: 700;
+
+        @include media-desktop {
+            font-size: 40px;
+        }
     }
 
     &__subtitle {
@@ -41,11 +50,22 @@
         font-size: 18px;
         font-weight: 300;
         color: map-get($Color-palette, grey-tones, text);
+
+        @include media-desktop {
+            padding: 0;
+        }
     }
 }
 
 
 /*Instruction section -homepage*/
+
+.instruction-section {
+    @include media-desktop {
+        margin: auto;
+    }
+}
+
 .instructions {
     display: flex;
     flex-direction: column;
@@ -54,8 +74,14 @@
     padding: 48px 20px 0;
     margin-bottom: 68px;
 
+    @include media-desktop {
+        padding: 50px 0;
+        margin-bottom: 0;
+        margin: auto;
+    }
+
     &__title {
-        margin-bottom: 26px;
+        margin-bottom: 25px;
         font-size: 24px;
         font-weight: 700;
     }
@@ -70,20 +96,30 @@
         width: 100%;
         padding-left: 10px;
 
+        @include media-desktop {
+            flex-direction: row;
+        }
+
         &__component {
+            position: relative;
             box-sizing: border-box;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             width: 100%;
-            padding: 29px 38px 33px 0;
+            padding: 29px 38px 29px 0;
             border-radius: 20px;
             background-color: map-get($Color-palette, grey-tones, background);
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
+            @include media-desktop {
+                padding: 28px auto;
+                width: auto;
+            }
+
             &__numbers {
                 position: absolute;
-                left: 20px;
+                left: -10px;
                 display: flex;
                 border-radius: 50%;
                 width: 24px;
@@ -111,71 +147,114 @@
 }
 
 /*Restaurant -homepage*/
+.restaurant-section {
+    padding: 54px 20px 66px;
+    background-color: map-get($Color-palette, grey-tones, background);
+
+    @include media-desktop {
+        padding: 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .restaurant {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 54px 20px 66px;
-    background-color: map-get($Color-palette, grey-tones, background);
+    align-items: flex-start;
+    width: 100%;
+
+    @include media-desktop {
+        gap: 28px;
+        margin: auto;
+        box-sizing: border-box;
+    }
 
     &__title {
-        align-self: flex-start;
         margin-bottom: 23px;
         font-size: 24px;
         font-weight: 700;
+
+        @include media-desktop {
+            margin-bottom: 0;
+            box-sizing: border-box;
+        }
     }
 
-    &__card {
-        position: relative;
-        box-sizing: border-box;
+    &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
-        margin-bottom: 18px;
+        align-items: center;
+        margin: auto;
 
-        &__img {
+        @include media-desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        &__card {
             position: relative;
             box-sizing: border-box;
-            object-fit: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             width: 100%;
-            height: 200px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            z-index: 1;
+            margin-bottom: 18px;
 
-        }
+            @include media-desktop {
+                flex-basis: 45%;
+                width: auto;
+                padding: 5px;
+            }
 
-        &__nametag-new {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            z-index: 2;
-            background-color: map-get($Color-palette, tertiary-color);
-            color: map-get($Color-palette, text-tertiary-color);
-            padding: 7px 9px;
-            border-radius: 2px;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            &__img {
+                position: relative;
+                box-sizing: border-box;
+                object-fit: cover;
+                width: 100%;
+                height: 200px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                z-index: 1;
 
-        }
+            }
 
-        &__title {
-            margin: 13px 0 5px 13px;
-            font-size: 18px;
-            font-weight: 700;
-        }
+            &__nametag-new {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                z-index: 2;
+                background-color: map-get($Color-palette, tertiary-color);
+                color: map-get($Color-palette, text-tertiary-color);
+                padding: 7px 9px;
+                border-radius: 2px;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 
-        &__subtitle {
-            margin: 0 0 12px 13px;
-            font-size: 17px;
-            font-weight: 300;
-        }
+            }
 
-        &__heart-btn {
-            position: absolute;
-            right: 15px;
-            bottom: 25px;
+            &__title {
+                margin: 13px 0 5px 13px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            &__subtitle {
+                margin: 0 0 12px 13px;
+                font-size: 17px;
+                font-weight: 300;
+            }
+
+            &__heart-btn {
+                position: absolute;
+                right: 15px;
+                bottom: 25px;
+            }
         }
     }
 }

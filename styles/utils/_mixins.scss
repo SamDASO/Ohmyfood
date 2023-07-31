@@ -1,0 +1,9 @@
+// MEDIA QUERIES - Tablets and desktop
+
+@mixin media-desktop {
+
+    @media (min-width: 1024px) {
+        @content;
+
+    }
+}
