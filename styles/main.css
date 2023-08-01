@@ -180,9 +180,10 @@ body {
   .footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     gap: 30px;
-    padding: 25px;
+    padding: 30px 25px;
+    height: 54px;
   }
 }
 .footer__logo {
@@ -190,6 +191,11 @@ body {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .footer__logo {
+    margin: 0 25px;
+  }
 }
 .footer__list {
   display: flex;
@@ -389,6 +395,7 @@ body {
     gap: 28px;
     margin: auto;
     box-sizing: border-box;
+    width: auto;
   }
 }
 .restaurant__title {

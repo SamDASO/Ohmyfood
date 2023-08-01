@@ -12,9 +12,10 @@
     @include media-desktop {
         flex-direction: row-reverse;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-end;
         gap: 30px;
-        padding: 25px;
+        padding: 30px 25px;
+        height: 54px;
     }
 
     &__logo {
@@ -22,6 +23,10 @@
         font-family: $font-family-titles;
         font-size: 18px;
         font-weight: 400;
+
+        @include media-desktop {
+            margin: 0 25px;
+        }
     }
 
     &__list {
