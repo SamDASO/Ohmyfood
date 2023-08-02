@@ -61,11 +61,18 @@ body {
 
 @keyframes animation-like {
   from {
-    fill: transparent;
+    transform: scale(0);
   }
   to {
-    fill: url(#btn-gradient) #9356DC;
-    stroke: none;
+    transform: scale(1);
+  }
+}
+@keyframes animation-unlike {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
   }
 }
 .btn-action {
@@ -92,9 +99,23 @@ body {
   background-color: transparent;
   border: none;
 }
-.heart-btn__icon:hover path {
-  animation: animation-like;
+
+.heart-btn__icon .heart-fill {
+  transform-origin: center;
+  animation-name: animation-unlike;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+  transform: scaleX(0);
+  transform: scaleY(0);
+}
+
+.heart-btn__icon:hover .heart-fill {
+  transform-origin: center;
+  animation-name: animation-like;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 .container-loader {
@@ -107,8 +128,8 @@ body {
   position: fixed;
   z-index: 100;
   background-color: #F6F6F6;
-  animation: visible-loader 7000ms;
-  animation-delay: 375ms;
+  animation: visible-loader 3000ms;
+  animation-delay: 250ms;
 }
 .container-loader__loader {
   width: 50vw;
@@ -122,24 +143,24 @@ body {
   opacity: 0;
   height: 100%;
   width: 5vw;
-  animation: bars;
-  animation-duration: 1500ms;
+  animation-name: bars;
+  animation-duration: 1000ms;
   animation-fill-mode: backwards;
-  animation-iteration-count: 4;
+  animation-iteration-count: 3;
   animation-direction: alternate-reverse;
   animation-timing-function: ease-in-out;
 }
 .container-loader__loader__bar--1 {
-  animation-delay: 375ms;
+  animation-delay: 250ms;
 }
 .container-loader__loader__bar--2 {
-  animation-delay: 750ms;
+  animation-delay: 500ms;
 }
 .container-loader__loader__bar--3 {
-  animation-delay: 1125ms;
+  animation-delay: 750ms;
 }
 .container-loader__loader__bar--4 {
-  animation-delay: 1500ms;
+  animation-delay: 1000ms;
 }
 
 /***************header all pages*************/

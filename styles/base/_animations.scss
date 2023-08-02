@@ -35,16 +35,25 @@
 }
 
 
-//Animation coeur
-
 @keyframes animation-like {
     from {
-        fill: transparent;
+        transform: scale(0);
     }
 
     to {
-        fill: url(#btn-gradient) #9356DC;
-        stroke: none;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes animation-unlike {
+    from {
+        transform: scale(1);
+
+    }
+
+    to {
+        transform: scale(0);
     }
 
 }

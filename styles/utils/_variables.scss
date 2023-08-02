@@ -15,10 +15,10 @@ $font-family-titles: 'Shrikhand', cursive;
 $font-family-text: 'Roboto', sans-serif;
 
 //Variables animations loader
-$animation-duration: 1500ms;
-$iteration-loader: 4;
+$animation-duration: 1000ms;
+$iteration-loader: 3;
 $animation-delay: $animation-duration/4;
-$animation-duration-bg: $animation-duration*4 + 1s;
+$animation-duration-bg: $animation-duration*2 + 1s;
 
 //Variables animations boutons gradient
 $anim-dur-btn: 1000ms;
