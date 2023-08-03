@@ -206,11 +206,12 @@
             justify-content: center;
             width: 100%;
             margin-bottom: 18px;
+            background-color: white;
+            border-radius: 15px;
 
             @include media-desktop {
                 flex-basis: 45%;
                 width: auto;
-                padding: 5px;
             }
 
             &__img {
