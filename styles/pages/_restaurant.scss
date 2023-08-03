@@ -64,6 +64,7 @@
         flex-direction: column;
         gap: 12px;
         min-width: 340px;
+        opacity: 0;
 
         &__title {
             font-size: 16px;
@@ -100,5 +101,32 @@
                 }
             }
         }
+    }
+}
+
+//animation sections
+.div {
+    &__starter {
+        animation: fadeIn;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    &__main {
+        animation: fadeIn;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    &__dessert {
+        animation: fadeIn;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
     }
 }

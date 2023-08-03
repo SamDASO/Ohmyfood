@@ -57,3 +57,15 @@
     }
 
 }
+
+//Restaurant sections - appear one after one
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
