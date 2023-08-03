@@ -1,0 +1,104 @@
+/*Header-homepage*/
+.header--page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__goback {
+        position: relative;
+        left: 17px;
+    }
+}
+
+//Banners
+
+.banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+//Principal section
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: -35px;
+    margin-bottom: -35px;
+    background-color: map-get($Color-palette, grey-tones, background);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    gap: 40px;
+
+    &__header,
+    &__div {
+        margin: auto;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+
+        &__title {
+            font-size: 28px;
+            font-family: $font-family-titles;
+            font-weight: 400;
+        }
+    }
+
+    &__div {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 340px;
+
+        &__title {
+            font-size: 16px;
+            font-weight: 300;
+            padding-bottom: 5px;
+            border-bottom: solid map-get($Color-palette, tertiary-color) 2px;
+            width: 40px;
+        }
+
+        &__article {
+            background-color: white;
+            border-radius: 15px;
+            padding: 15px;
+
+            &__title {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            &__text {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &__t {
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+
+
+                &__p {
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
