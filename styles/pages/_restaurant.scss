@@ -1,4 +1,4 @@
-/*Header-homepage*/
+/*Header-restaurant pages*/
 .header--page {
     width: 100%;
     display: flex;
@@ -9,6 +9,10 @@
         position: relative;
         left: 17px;
     }
+}
+
+.header__logo--page {
+    box-shadow: none;
 }
 
 //Banners
@@ -33,12 +37,11 @@
     align-items: flex-start;
     position: relative;
     top: -35px;
-    margin-bottom: -35px;
+    /* For the responsive margin: 0 auto -35px auto;*/
     background-color: map-get($Color-palette, grey-tones, background);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding-top: 32px;
-    padding-bottom: 40px;
+    padding: 32px 13px 40px;
     gap: 40px;
 
     &__header,
@@ -63,8 +66,9 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
-        min-width: 340px;
+        width: 350px;
         opacity: 0;
+        /*for the transition when the page load*/
 
         &__title {
             font-size: 16px;
@@ -75,23 +79,49 @@
         }
 
         &__article {
+            display: flex;
+            justify-content: space-between;
             background-color: white;
             border-radius: 15px;
             padding: 15px;
+            width: 90%;
+            margin: auto;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &__div {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                flex-shrink: 2;
+            }
 
             &__title {
                 font-size: 18px;
                 font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             &__text {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                white-space: nowrap;
+                overflow: hidden;
 
                 &__t {
                     font-size: 15px;
                     font-weight: 300;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-right: 15px;
+
                 }
 
 
@@ -100,9 +130,29 @@
                     font-weight: 700;
                 }
             }
+
         }
     }
+
+    &__checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0;
+        height: 70px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: map-get($Color-palette, tertiary-color);
+        margin: -15px -15px -15px 15px;
+        animation-name: unchecked;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-fill-mode: backwards;
+        visibility: hidden;
+        flex-shrink: 0;
+    }
 }
+
 
 //animation sections
 .div {
@@ -129,4 +179,17 @@
         animation-delay: 3s;
         animation-fill-mode: forwards;
     }
+}
+
+.menu__div__article:hover {
+    .menu__checkbox {
+        animation-name: checked;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        visibility: visible;
+
+    }
+
+
 }

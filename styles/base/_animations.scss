@@ -69,3 +69,25 @@
         opacity: 1;
     }
 }
+
+//Restaurant sections - checkbox
+
+@keyframes checked {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60px;
+    }
+}
+
+@keyframes unchecked {
+    from {
+        width: 60px;
+    }
+
+    to {
+        width: 0;
+    }
+}
