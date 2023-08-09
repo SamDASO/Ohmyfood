@@ -34,30 +34,6 @@
     }
 }
 
-
-@keyframes animation-like {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
-
-}
-
-@keyframes animation-unlike {
-    from {
-        transform: scale(1);
-
-    }
-
-    to {
-        transform: scale(0);
-    }
-
-}
-
 //Restaurant sections - appear one after one
 
 @keyframes fadeIn {

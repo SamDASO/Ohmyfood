@@ -27,18 +27,13 @@
 //Btn coeur avec animation
 
 .heart-btn__icon .heart-fill {
-    transform-origin: center;
-    animation-name: animation-unlike;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-in-out;
     transform: scale(0);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
 
 .heart-btn__icon:hover .heart-fill {
-    transform-origin: center;
-    animation-name: animation-like;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+    transform: scale(1)
 }
