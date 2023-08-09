@@ -92,9 +92,11 @@ body {
 @keyframes unchecked {
   from {
     width: 60px;
+    visibility: visible;
   }
   to {
     width: 0;
+    visibility: hidden;
   }
 }
 .btn-action {
@@ -146,9 +148,10 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 110vh;
+  height: 100vh;
   position: fixed;
   z-index: 100;
+  top: 0;
   background-color: #F6F6F6;
   animation: visible-loader 3000ms;
   animation-delay: 250ms;

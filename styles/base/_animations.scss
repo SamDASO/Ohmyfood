@@ -85,9 +85,11 @@
 @keyframes unchecked {
     from {
         width: 60px;
+        visibility: visible;
     }
 
     to {
         width: 0;
+        visibility: hidden;
     }
 }
