@@ -1,0 +1,427 @@
+* {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.font-family-titles {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.main-container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+@keyframes visible-loader {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+.btn-action {
+  transition: all 1000ms ease;
+}
+.btn-action:hover {
+  filter: brightness(1.2);
+  -webkit-filter: brightness(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes checked {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+@keyframes unchecked {
+  from {
+    width: 60px;
+    visibility: visible;
+  }
+  to {
+    width: 0;
+    visibility: hidden;
+  }
+}
+.btn-action {
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  padding: 13px 19px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn-action--order {
+  padding: 15px 48px;
+  margin: auto;
+}
+
+.heart-btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+}
+
+.heart-btn__icon .heart-fill {
+  transform: scale(0);
+  transition-property: transform;
+  transform-origin: center;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.heart-btn__icon:hover .heart-fill {
+  transform: scale(1);
+}
+
+.container-loader {
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background-color: #F6F6F6;
+  animation: visible-loader 3000ms;
+  animation-delay: 250ms;
+}
+.container-loader__loader {
+  width: 50vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container-loader__loader__bar {
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  opacity: 0;
+  height: 100%;
+  width: 5vw;
+  animation-name: bars;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 3;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+.container-loader__loader__bar--1 {
+  animation-delay: 250ms;
+}
+.container-loader__loader__bar--2 {
+  animation-delay: 500ms;
+}
+.container-loader__loader__bar--3 {
+  animation-delay: 750ms;
+}
+.container-loader__loader__bar--4 {
+  animation-delay: 1000ms;
+}
+
+/***************header all pages*************/
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  width: 100%;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1024px) {
+  .header__logo {
+    box-shadow: none;
+  }
+}
+
+/***************footer all pages*************/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 25px;
+  background-color: #353535;
+}
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 30px;
+    padding: 30px 25px;
+    height: 54px;
+  }
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .footer__logo {
+    margin: 0 25px;
+  }
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 7px;
+}
+@media (min-width: 1024px) {
+  .footer__list {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.footer__list__component {
+  display: flex;
+  gap: 11px;
+}
+@media (min-width: 1024px) {
+  .footer__list__component {
+    padding: 0 10px;
+  }
+}
+.footer__list__component__text {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__list__component__text--bold {
+  font-weight: 500;
+}
+
+/*Header-restaurant pages*/
+.header--page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header--page__goback {
+  position: relative;
+  left: 17px;
+  z-index: 200;
+}
+
+.header__logo--page {
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.banner__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  top: -35px;
+  background-color: #F6F6F6;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 32px 13px 40px;
+  gap: 40px;
+  margin-bottom: -35px;
+}
+@media (min-width: 1024px) {
+  .menu {
+    max-width: 1055px;
+    width: 45%;
+    margin: 0 auto -35px;
+    padding: 51px 210px 40px;
+  }
+}
+.menu__header, .menu__div {
+  margin: auto;
+}
+.menu__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.menu__header__title {
+  font-size: 28px;
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+.menu__div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  width: 100%;
+  /*for the transition when the page load*/
+}
+.menu__div__title {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 5px;
+  border-bottom: solid #99E2D0 2px;
+  width: 40px;
+}
+.menu__div__article {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  overflow: hidden;
+}
+.menu__div__article__div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 2;
+}
+.menu__div__article__title {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__div__article__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu__div__article__text__t {
+  font-size: 15px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 15px;
+}
+.menu__div__article__text__p {
+  font-size: 15px;
+  font-weight: 700;
+}
+.menu__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 70px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99E2D0;
+  margin: -15px -15px -15px 15px;
+  animation-name: unchecked;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  visibility: hidden;
+  flex-shrink: 0;
+}
+
+.div__starter {
+  animation: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.div__main {
+  animation: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.div__dessert {
+  animation: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.menu__div__article:hover .menu__checkbox {
+  animation-name: checked;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  visibility: visible;
+}/*# sourceMappingURL=main-restaurant.css.map */
