@@ -23,17 +23,6 @@
 
 }
 
-//Animation boutons gradient
-
-.btn-action {
-    transition: all $anim-dur-btn ease;
-
-    &:hover {
-        filter: brightness(1.2);
-        -webkit-filter: brightness(1.2)
-    }
-}
-
 //Restaurant sections - appear one after one
 
 @keyframes fadeIn {
