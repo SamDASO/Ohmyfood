@@ -49,14 +49,6 @@ body {
     visibility: hidden;
   }
 }
-.btn-action {
-  transition: all 1000ms ease;
-}
-.btn-action:hover {
-  filter: brightness(1.2);
-  -webkit-filter: brightness(1.2);
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -99,6 +91,14 @@ body {
 .btn-action--order {
   padding: 15px 48px;
   margin: auto;
+}
+
+.btn-action {
+  transition: all 1000ms ease;
+}
+.btn-action:hover {
+  filter: brightness(1.2);
+  -webkit-filter: brightness(1.2);
 }
 
 .heart-btn {
